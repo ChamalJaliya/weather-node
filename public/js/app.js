@@ -16,7 +16,7 @@ weatherForm.addEventListener("submit", evt => {
     messegeTwo.textContent = "";
     // getting data at client-side : fetch the forecast
     // to make http req from the client side js we can use "Fetch API" :- Browser based API
-    fetch("http://localhost:3000/weather?address=" + location).then(res => {
+    fetch("/weather?address=" + location).then(res => {
         res.json().then(data => {
             if (data.error) {
                 messegeOne.textContent = data.error;
